@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" strict="true">
+	<Properties>
+		<Property name="filename">ARC_Automation.log</Property>
+	</Properties>
+	<Appenders>
+		<Appender type="Console" name="STDOUT">
+			<Layout type="PatternLayout" pattern="%d{yyyy-MM-dd HH:mm:ss}  %-5p %c{1} :%L - %m%n" />
+		</Appender>
+		<Appender type="File" name="File" fileName="${filename}"
+			append="false">
+			<Layout type="PatternLayout" pattern="%d{yyyy-MM-dd HH:mm:ss}{EST}  %-5p %c{1} :%L - %m%n" />
+		</Appender>
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+</Configuration>
