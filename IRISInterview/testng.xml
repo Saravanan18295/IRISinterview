@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestSuite" thread-count="2" parallel="none" >
+<suite name="TestSuite" thread-count="2" parallel="none">
 	<test name="ChromeTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="TestClass.VerifyQATest"> </class>
+			<class name="TestClass.VerifyQATest"></class>
+		</classes>
+	</test>
+	<test name="FirefoxTest">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="TestClass.VerifyQATest"></class>
+		</classes>
+	</test>
+	<test name="PhantomJS">
+		<parameter name="browser" value="phantomjs" />
+		<classes>
+			<class name="TestClass.VerifyQATest"></class>
+		</classes>
+	</test>
+	<test name="OperaTest">
+		<parameter name="browser" value="opera" />
+		<classes>
+			<class name="TestClass.VerifyQATest"></class>
+		</classes>
+	</test>
+	<test name="EdgeTest">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="TestClass.VerifyQATest"></class>
 		</classes>
 	</test>
 </suite>

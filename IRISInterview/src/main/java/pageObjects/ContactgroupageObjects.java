@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class InventoryPageObjects {
+public class ContactgroupageObjects {
 
 	@FindBy(xpath="//div[@class='bg-light']/div/div[2]/h1")
 	public WebElement NewsSections;
@@ -16,7 +16,7 @@ public class InventoryPageObjects {
 	@FindBy(xpath="//div[@class='bg-light']/div/div[text()='Finished loading']")
 	public WebElement Bodyofpage;
 	
-	public InventoryPageObjects(WebDriver driver){
+	public ContactgroupageObjects(WebDriver driver){
 		PageFactory.initElements(driver, this);
 	}
 }

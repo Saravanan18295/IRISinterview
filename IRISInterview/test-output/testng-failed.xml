@@ -5,8 +5,9 @@
     <classes>
       <class name="TestClass.VerifyQATest">
         <methods>
+          <include name="VerifyQATest"/>
           <include name="report"/>
-          <include name="ScrollandSelectOrganization"/>
+          <include name="SchoolSearch"/>
           <include name="Teardown"/>
         </methods>
       </class> <!-- TestClass.VerifyQATest -->

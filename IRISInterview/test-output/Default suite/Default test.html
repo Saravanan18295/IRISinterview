@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 17 19:50:53 IST 2022</td>
+<td>Started on:</td><td>Fri Nov 18 16:55:20 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>556 seconds (556139 ms)</td>
+<tr><td>Total time:</td><td>42 seconds (42097 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,18 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestClass.VerifyQATest.ScrollandSelectOrganization()'><b>ScrollandSelectOrganization</b><br>Test class: TestClass.VerifyQATest</td>
-<td><div><pre>junit.framework.AssertionFailedError: Failedno such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;Contact Group&apos;]//parent::h2//following-sibling::div[@data-testid=&apos;activeIcon&apos;]&quot;}
-  (Session info: chrome=107.0.5304.107)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
-System info: host: &apos;MT-5CG1057HYC&apos;, ip: &apos;192.168.225.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}), userDataDir=C:\Users\M1066217\AppData\Local\Temp\scoped_dir15368_423968379}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=none, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:49323}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=107.0.5304.107, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: ec9c8442b38d7987e6f600b7df0e578f
-*** Element info: {Using=xpath, value=//*[text()=&apos;Contact Group&apos;]//parent::h2//following-sibling::div[@data-testid=&apos;activeIcon&apos;]}
-	at junit.framework.Assert.fail(Assert.java:47)
-	at TestClass.VerifyQATest.ScrollandSelectOrganization(VerifyQATest.java:91)
+<td title='TestClass.VerifyQATest.VerifyQATest()'><b>VerifyQATest</b><br>Test class: TestClass.VerifyQATest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at TestClass.VerifyQATest.VerifyQATest(VerifyQATest.java:94)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,18 +110,13 @@ Session ID: ec9c8442b38d7987e6f600b7df0e578f
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1444500451", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1444500451'><pre>junit.framework.AssertionFailedError: Failedno such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;Contact Group&apos;]//parent::h2//following-sibling::div[@data-testid=&apos;activeIcon&apos;]&quot;}
-  (Session info: chrome=107.0.5304.107)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
-System info: host: &apos;MT-5CG1057HYC&apos;, ip: &apos;192.168.225.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}), userDataDir=C:\Users\M1066217\AppData\Local\Temp\scoped_dir15368_423968379}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=none, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:49323}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=107.0.5304.107, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: ec9c8442b38d7987e6f600b7df0e578f
-*** Element info: {Using=xpath, value=//*[text()=&apos;Contact Group&apos;]//parent::h2//following-sibling::div[@data-testid=&apos;activeIcon&apos;]}
-	at junit.framework.Assert.fail(Assert.java:47)
-	at TestClass.VerifyQATest.ScrollandSelectOrganization(VerifyQATest.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace780566650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace780566650'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at TestClass.VerifyQATest.VerifyQATest(VerifyQATest.java:94)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -156,8 +146,8 @@ Session ID: ec9c8442b38d7987e6f600b7df0e578f
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>13</td>
-<td>TestClass.VerifyQATest@403132fc</td></tr>
+<td>14</td>
+<td>TestClass.VerifyQATest@61078690</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -167,20 +157,20 @@ Session ID: ec9c8442b38d7987e6f600b7df0e578f
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestClass.VerifyQATest.TestData()'><b>TestData</b><br>Test class: TestClass.VerifyQATest</td>
+<td title='TestClass.VerifyQATest.BTestData()'><b>BTestData</b><br>Test class: TestClass.VerifyQATest</td>
 <td></td>
 <td>1</td>
-<td>TestClass.VerifyQATest@403132fc</td></tr>
+<td>TestClass.VerifyQATest@61078690</td></tr>
 <tr>
-<td title='TestClass.VerifyQATest.OpenBrowser()'><b>OpenBrowser</b><br>Test class: TestClass.VerifyQATest<br>Parameters: chrome</td>
+<td title='TestClass.VerifyQATest.SchoolSearch()'><b>SchoolSearch</b><br>Test class: TestClass.VerifyQATest</td>
 <td></td>
-<td>528</td>
-<td>TestClass.VerifyQATest@403132fc</td></tr>
+<td>17</td>
+<td>TestClass.VerifyQATest@61078690</td></tr>
 <tr>
-<td title='TestClass.VerifyQATest.aSearch()'><b>aSearch</b><br>Test class: TestClass.VerifyQATest</td>
+<td title='TestClass.VerifyQATest.AOpenBrowser()'><b>AOpenBrowser</b><br>Test class: TestClass.VerifyQATest<br>Parameters: chrome</td>
 <td></td>
-<td>9</td>
-<td>TestClass.VerifyQATest@403132fc</td></tr>
+<td>4</td>
+<td>TestClass.VerifyQATest@61078690</td></tr>
 </table><p>
 </body>
 </html>

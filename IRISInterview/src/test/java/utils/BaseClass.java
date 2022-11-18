@@ -38,18 +38,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 /**
- * Description : This class contain actions to initialize driver, to read property file,
- * to close driver
- * @author GMS Automation Team
- * @version 0.1
+ * Description : This class contain actions to initialize driver, to read excel file
+ * and report
+ * @author Saravanan Pazhani
+ * @version 1.0
  */
 public class BaseClass {
 	public static WebDriver driver;
 	public static String searchvalue;
 	public static String Selectgroupvalue;
 	public static String SelectMonthvalue;
-	public static String LastName;
-	public static String PostalCode;
+	public static String CommonURL;
+	public static String QAtestURL;
 	public static String CurrentURL;
 	public ExtentTest test;
 	public ExtentReports report;
@@ -58,15 +58,14 @@ public class BaseClass {
 	**********************************************************************
 	* @MethodName : openBrowser()
 	* @Description : This function is used to delete all cookies at the start of each scenario to avoid
-	* shared state between tests
-	* @return static
+	* shared state between tests. We can use any driver based on the requirement
+	* and it's configured with testng.xml as well with multiple browsers
 	***********************************************************************
 	*/
 	
 	@Parameters("browser")
 	@Test
-	//Instantiate driver
-	public void OpenBrowser(@Optional("chrome") String browser) {
+	public void AOpenBrowser(@Optional("chrome") String browser) {
 		try {
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
@@ -89,14 +88,13 @@ public class BaseClass {
 			WebDriverManager.phantomjs().setup();
 			driver = new PhantomJSDriver();
 		}else if (browser.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.firefoxdriver().version("0.21.0").setup(); 
 			driver = new FirefoxDriver(dc);
 		}else if (browser.equals("opera")) {
 			WebDriverManager.operadriver().setup();
 			driver = new OperaDriver();
 		}
 		driver.manage().deleteAllCookies();
-		System.out.println("suxxess");
 		test.log(LogStatus.PASS, "Succesfully Launched the browser: " + browser);
 	} catch (Exception e) {
 		test.log(LogStatus.SKIP,"Test Skipped" + e.getMessage());
@@ -104,20 +102,36 @@ public class BaseClass {
 	}
 	}	
 	
+
+	/**
+	**********************************************************************
+	* @MethodName : TestData()
+	* @Description : This function is used to fetch the excel value based on the column name and row number. 
+	* We can easily iterate the test case with different data sets and very useful in BDD scenario outline. 
+	* Even manual tester can handle and make changes in the automation by updating the data sheet.
+	***********************************************************************
+	*/
+	
 	@Test
-	public void TestData() throws InvalidFormatException, IOException {	
+	public void BTestData() throws InvalidFormatException, IOException {	
 		ExcelReader reader = new ExcelReader();
 		String userDir = System.getProperty("user.dir");
 		List<Map<String,String>> testData = 
-				reader.getData(userDir+"\\Data\\SwagLab.xlsx", "Data");
+				reader.getData(userDir+"\\Data\\IRISTestData.xlsx", "Data");
 		searchvalue = testData.get(0).get("Search value");
 		Selectgroupvalue = testData.get(0).get("Select text");
 		SelectMonthvalue = testData.get(0).get("Select Month");
-		LastName = testData.get(0).get("LastName");
-		PostalCode = testData.get(0).get("PostalCode");
+		CommonURL = testData.get(0).get("CommonURL");
+		QAtestURL = testData.get(0).get("QAtestURL");
 		test.log(LogStatus.PASS, "Succesfully Login to the application");
 	}
 
+	/**
+	**********************************************************************
+	* @MethodName : report()
+	* @Description : This function is used to capture the log in the extent report.
+	***********************************************************************
+	*/
 	@BeforeTest
 	public void report() throws InterruptedException{
 		Date date = new Date();

@@ -6,14 +6,66 @@
     <classes>
       <class name="TestClass.VerifyQATest">
         <methods>
-          <include name="areport"/>
-          <include name="ScrollandSelectOrganization"/>
-          <include name="TestData"/>
-          <include name="OpenBrowser"/>
-          <include name="Search"/>
+          <include name="report"/>
           <include name="Teardown"/>
+          <include name="SelectOrganizationandVerify"/>
         </methods>
       </class> <!-- TestClass.VerifyQATest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
+  <test thread-count="2" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="TestClass.VerifyQATest">
+        <methods>
+          <include name="report"/>
+          <include name="SchoolSearch"/>
+          <include name="AOpenBrowser" invocation-numbers="0"/>
+          <include name="Teardown"/>
+          <include name="SelectOrganizationandVerify"/>
+        </methods>
+      </class> <!-- TestClass.VerifyQATest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="2" name="PhantomJS(failed)">
+    <parameter name="browser" value="phantomjs"/>
+    <classes>
+      <class name="TestClass.VerifyQATest">
+        <methods>
+          <include name="report"/>
+          <include name="SchoolSearch"/>
+          <include name="Teardown"/>
+          <include name="SelectOrganizationandVerify"/>
+        </methods>
+      </class> <!-- TestClass.VerifyQATest -->
+    </classes>
+  </test> <!-- PhantomJS(failed) -->
+  <test thread-count="2" name="OperaTest(failed)">
+    <parameter name="browser" value="opera"/>
+    <classes>
+      <class name="TestClass.VerifyQATest">
+        <methods>
+          <include name="report"/>
+          <include name="SchoolSearch"/>
+          <include name="AOpenBrowser" invocation-numbers="0"/>
+          <include name="Teardown"/>
+          <include name="SelectOrganizationandVerify"/>
+        </methods>
+      </class> <!-- TestClass.VerifyQATest -->
+    </classes>
+  </test> <!-- OperaTest(failed) -->
+  <test thread-count="2" name="EdgeTest(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="TestClass.VerifyQATest">
+        <methods>
+          <include name="report"/>
+          <include name="SchoolSearch"/>
+          <include name="AOpenBrowser" invocation-numbers="0"/>
+          <include name="Teardown"/>
+          <include name="SelectOrganizationandVerify"/>
+        </methods>
+      </class> <!-- TestClass.VerifyQATest -->
+    </classes>
+  </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

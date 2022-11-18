@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="info" strict="true">
 	<Properties>
-		<Property name="filename">ARC_Automation.log</Property>
+		<Property name="filename">IRISInterviewAssesment.log</Property>
 	</Properties>
 	<Appenders>
 		<Appender type="Console" name="STDOUT">

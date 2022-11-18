@@ -41,11 +41,10 @@ import com.aventstack.extentreports.ReportService;
 
 /**
  * Description : This class is created for handle all selenium actions.
- * 
- * @author GMS Automation Team
- * @version 0.1
+ * @author Automation Team
+ * @version 1.0
  */
-//
+
 public class CommonLibraries extends BaseClass {
 	static Logger log = LogManager.getLogger(CommonLibraries.class);
 
@@ -61,9 +60,10 @@ public class CommonLibraries extends BaseClass {
 		boolean elementPresent = false;
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, explicitwaitGlobalTime());
-			if (wait.until(ExpectedConditions.visibilityOf(locator)) != null) {
+			if (wait.until(ExpectedConditions.visibilityOf(locator)) != null || wait.until(ExpectedConditions.elementToBeClickable(locator)) != null) {
 				elementPresent = true;
 			}
+			takeScreenShotForPass();
 		} catch (Exception e) {
 			log.info("Element  not Found after waiting for 60 seconds " + e.getMessage());
 			takeScreenShotForFail();
@@ -72,9 +72,8 @@ public class CommonLibraries extends BaseClass {
 		return elementPresent;
 	}
 
-	/*
-	 * global Explict wait time for each element
-	 */
+	
+	// global Explict wait time for each element
 
 	public int explicitwaitGlobalTime() {
 		int secs = 50;
@@ -87,12 +86,14 @@ public class CommonLibraries extends BaseClass {
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
 
+	//Method to scroll and Locate the element
 	public void scrolltoLocateElement(WebElement element) {
 		Coordinates coordinate = ((Locatable) element).getCoordinates();
 		coordinate.onPage();
 		coordinate.inViewPort();
 	}
 
+	//Method to send the values in an element
 	public void sendKeys(WebElement element, String typeValue) {
 		explicitWait(element);
 		scrolltoLocateElement(element);
@@ -103,11 +104,7 @@ public class CommonLibraries extends BaseClass {
 	}
 
 
-	/**
-	 * Method to clear text element
-	 * 
-	 * @param elementBy
-	 */
+	 //Method to clear element field values
 	public void clearElement(WebElement element) {
 		try{
 			element.sendKeys(Keys.HOME);
@@ -124,15 +121,15 @@ public class CommonLibraries extends BaseClass {
 		}
 	}
 
+	//Method to print the current page title at any time
 	public void getpagetitle() {
 		String pagetitle = driver.getTitle();
 		log.info("Current page title is " + pagetitle);
 	}
 	
 	
-	/**
-	 * Description : This method is to take screenshot for Pass steps.
-	 */
+	
+	 //This method is to take screenshot for Pass steps.
 	public void takeScreenShotForPass() {
 		String filePath = System.getProperty("user.dir") + "\\Screenshots\\";
 		String fileName = null;
@@ -158,9 +155,8 @@ public class CommonLibraries extends BaseClass {
 
 	}
 
-	/**
-	 * Description : This method is to take screenshot for Failed steps.
-	 */
+	
+	 //This method is to take screenshot for Failed steps.
 	public void takeScreenShotForFail() {
 		String filePath = System.getProperty("user.dir") + "\\Screenshots\\";
 		String fileName = null;
@@ -185,7 +181,7 @@ public class CommonLibraries extends BaseClass {
 		}
 	}
 
-	
+	//Method to Click the element
 	public void clickElement(WebElement Element, String ElementName) {
 		int secs = explicitwaitGlobalTime();
 		try {
@@ -202,15 +198,8 @@ public class CommonLibraries extends BaseClass {
 		
 	}
 
-	/**
-	**********************************************************************
-	* @MethodName : verifyElementToBeVisible()
-	* @Description : This function is used to verifyElementToBeVisible
-	* @param WebElement locator
-	* @param String elementName
-	* @return boolean
-	********************************************************************
-	***/
+
+	//This function is used to verifyElementToBeVisible
 	public boolean verifyElementToBeVisible(WebElement locator, String elementName) {
 		boolean elementVisible = false;
 		int secs = explicitwaitGlobalTime();

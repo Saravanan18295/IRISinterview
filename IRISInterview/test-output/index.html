@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\M1066217\AppData\Local\Temp\testng-eclipse-1570125278\testng-customsuite.xml</span>
+                    <span>C:\Users\M1066217\AppData\Local\Temp\testng-eclipse--1040657551\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestClass.VerifyQATest" class="method navigator-link" hash-for-method="ScrollandSelectOrganization">ScrollandSelectOrganization</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestClass.VerifyQATest" class="method navigator-link" hash-for-method="VerifyQATest">VerifyQATest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -118,17 +118,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestClass.VerifyQATest" class="method navigator-link" hash-for-method="OpenBrowser(chrome)">OpenBrowser(chrome)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestClass.VerifyQATest" class="method navigator-link" hash-for-method="AOpenBrowser(chrome)">AOpenBrowser(chrome)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestClass.VerifyQATest" class="method navigator-link" hash-for-method="TestData">TestData</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestClass.VerifyQATest" class="method navigator-link" hash-for-method="BTestData">BTestData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestClass.VerifyQATest" class="method navigator-link" hash-for-method="aSearch">aSearch</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestClass.VerifyQATest" class="method navigator-link" hash-for-method="SchoolSearch">SchoolSearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -151,20 +151,15 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ScrollandSelectOrganization">
-                  </a> <!-- ScrollandSelectOrganization -->
-                  <span class="method-name">ScrollandSelectOrganization</span>
-                  <div class="stack-trace">junit.framework.AssertionFailedError: Failedno such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;Contact Group&apos;]//parent::h2//following-sibling::div[@data-testid=&apos;activeIcon&apos;]&quot;}
-  (Session info: chrome=107.0.5304.107)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
-System info: host: &apos;MT-5CG1057HYC&apos;, ip: &apos;192.168.225.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}), userDataDir=C:\Users\M1066217\AppData\Local\Temp\scoped_dir15368_423968379}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=none, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:49323}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=107.0.5304.107, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: ec9c8442b38d7987e6f600b7df0e578f
-*** Element info: {Using=xpath, value=//*[text()=&apos;Contact Group&apos;]//parent::h2//following-sibling::div[@data-testid=&apos;activeIcon&apos;]}
-	at junit.framework.Assert.fail(Assert.java:47)
-	at TestClass.VerifyQATest.ScrollandSelectOrganization(VerifyQATest.java:91)
+                  <a name="VerifyQATest">
+                  </a> <!-- VerifyQATest -->
+                  <span class="method-name">VerifyQATest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at TestClass.VerifyQATest.VerifyQATest(VerifyQATest.java:94)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -207,24 +202,24 @@ Session ID: ec9c8442b38d7987e6f600b7df0e578f
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="OpenBrowser(chrome)">
-                  </a> <!-- OpenBrowser(chrome) -->
-                  <span class="method-name">OpenBrowser</span>
+                  <a name="AOpenBrowser(chrome)">
+                  </a> <!-- AOpenBrowser(chrome) -->
+                  <span class="method-name">AOpenBrowser</span>
                   <span class="parameters">(chrome)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TestData">
-                  </a> <!-- TestData -->
-                  <span class="method-name">TestData</span>
+                  <a name="BTestData">
+                  </a> <!-- BTestData -->
+                  <span class="method-name">BTestData</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="aSearch">
-                  </a> <!-- aSearch -->
-                  <span class="method-name">aSearch</span>
+                  <a name="SchoolSearch">
+                  </a> <!-- SchoolSearch -->
+                  <span class="method-name">SchoolSearch</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,7 +227,7 @@ Session ID: ec9c8442b38d7987e6f600b7df0e578f
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\M1066217\AppData\Local\Temp\testng-eclipse-1570125278\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\M1066217\AppData\Local\Temp\testng-eclipse--1040657551\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -283,26 +278,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'OpenBrowser')
+data.setCell(0, 1, 'SchoolSearch')
 data.setCell(0, 2, 'TestClass.VerifyQATest')
-data.setCell(0, 3, 528409);
+data.setCell(0, 3, 17865);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'ScrollandSelectOrganization')
+data.setCell(1, 1, 'VerifyQATest')
 data.setCell(1, 2, 'TestClass.VerifyQATest')
-data.setCell(1, 3, 13339);
+data.setCell(1, 3, 14576);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'aSearch')
+data.setCell(2, 1, 'AOpenBrowser')
 data.setCell(2, 2, 'TestClass.VerifyQATest')
-data.setCell(2, 3, 9514);
+data.setCell(2, 3, 4423);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TestData')
+data.setCell(3, 1, 'BTestData')
 data.setCell(3, 2, 'TestClass.VerifyQATest')
-data.setCell(3, 3, 1141);
+data.setCell(3, 3, 1271);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -334,26 +329,26 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">OpenBrowser(chrome)</span>
-                <span class="method-start">1268 ms</span>
+                <span class="method-name">AOpenBrowser(chrome)</span>
+                <span class="method-start">1221 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TestData</span>
-                <span class="method-start">529696 ms</span>
+                <span class="method-name">BTestData</span>
+                <span class="method-start">5657 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SchoolSearch</span>
+                <span class="method-start">6930 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">ScrollandSelectOrganization</span>
-                <span class="method-start">530840 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">aSearch</span>
-                <span class="method-start">544185 ms</span>
+                <span class="method-name">VerifyQATest</span>
+                <span class="method-start">24800 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">Teardown</span>
-                <span class="method-start">553709 ms</span>
+                <span class="method-start">39386 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
